@@ -15,7 +15,7 @@
 <body class="bg-light">
 <div class="container py-5">
     <main>
-        <h1 class="text-center">@yield('title')</h1>
+        <h1 class="text-center mb-4">@yield('title')</h1>
         @yield('content')
     </main>
 </div>

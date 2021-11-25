@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -15,12 +16,13 @@ class UsersController extends Controller
 
     public function create()
     {
-        //
+        return view('form');
     }
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        User::create($request->only(['name', 'email']));
+        return redirect()->route('users.index');
     }
 
     public function show(User $user)
@@ -30,12 +32,13 @@ class UsersController extends Controller
 
     public function edit(User $user)
     {
-        //
+        return view('form', compact('user'));
     }
 
-    public function update(Request $request, User $user)
+    public function update(Request $request, User $user): RedirectResponse
     {
-        //
+        $user->update($request->only(['name', 'email']));
+        return redirect()->route('users.index');
     }
 
     public function destroy(User $user)
