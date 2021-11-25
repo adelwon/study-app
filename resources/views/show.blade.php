@@ -13,8 +13,12 @@
                 Create: {{$user->created_at->format('d/m/y H:i:s')}}<br>
                 Edit: {{$user->updated_at->format('d/m/y H:i:s')}}
             </p>
-            <a href="{{route('users.edit', $user)}}" class="btn btn-primary">Edit</a>
-            <a href="#" class="btn btn-danger">Delete</a>
+            <form method="post" action="{{route('users.destroy', $user)}}">
+                @csrf
+                @method('DELETE')
+                <a href="{{route('users.edit', $user)}}" class="btn btn-primary">Edit</a>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         </div>
     </div>
 @endsection
