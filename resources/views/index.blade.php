@@ -6,7 +6,7 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">id</th>
             <th scope="col">Name</th>
             <th scope="col">E-mail</th>
             <th scope="col">Actions</th>
@@ -23,4 +23,5 @@
         @endforeach
         </tbody>
     </table>
+    {{ $users->links() }}
 @endsection
