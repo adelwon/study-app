@@ -1,3 +1,4 @@
+<?php /** @var App\Models\User  $user */?>
 @extends('layout')
 
 @section('title', isset($user)?'Edit user: '.$user->name : 'Create user')

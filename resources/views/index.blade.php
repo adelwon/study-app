@@ -1,3 +1,4 @@
+<?php /** @var App\Models\User  $users */?>
 @extends('layout')
 @section('title', 'Users')
 @section('content')
