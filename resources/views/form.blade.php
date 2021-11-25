@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', isset($user)?'Update user: '.$user->name : 'Create user')
+@section('title', isset($user)?'Edit user: '.$user->name : 'Create user')
 
 @section('content')
     <a href="{{route('users.index')}}">Go back</a>
@@ -27,7 +27,7 @@
                        type="text" class="form-control" placeholder="E-mail" aria-label="E-mail">
             </div>
             <div class="col-2">
-                <button type="submit" class="btn btn-primary">Create user</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </form>
