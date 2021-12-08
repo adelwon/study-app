@@ -20,7 +20,7 @@ class CreateCategoriesSeeder extends Seeder
                 'description' => 'Ноутбуки-ShopOnline'
             ],
             [
-                'name' => 'Компютери',
+                'name' => 'Комп\'ютери',
                 'description' => 'Компютери-ShopOnline'
             ],
             [
