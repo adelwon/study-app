@@ -4,25 +4,8 @@
             <span class="fs-4">ShopOnline</span>
         </a>
 
-        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto navbar-expand-lg">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Категорії
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                                @foreach($categories as $category)
-                                    <li><a class="dropdown-item " href="#">{{$category->name}}</a></li>
-                                @endforeach
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <x-navbar/>
+
         <div class="col-md-4 text-end">
             <a class="link-secondary" href="#" aria-label="Корзина">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="mx-3 bi bi-cart" viewBox="0 0 16 16">
