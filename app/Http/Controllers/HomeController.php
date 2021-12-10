@@ -9,14 +9,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $products = Product::query()->get();
+        $products = Product::query()->orderBy('created_at')->take(3)->get();
 
-        return view('products.index', compact('products'));
+        return view('pages.index', compact('products'));
     }
 
-    public function category($category)
+    public function show(Category $category)
     {
-        //
+        return view('pages.category', ['products' => $category->products], compact('category'));
     }
 
 }

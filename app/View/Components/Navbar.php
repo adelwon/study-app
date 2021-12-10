@@ -27,7 +27,7 @@ class Navbar extends Component
      */
     public function render()
     {
-        $categories = Category::query()->get();
+        $categories = Category::all();
         return view('components.navbar', compact('categories'));
     }
 }

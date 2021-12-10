@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/category/{category}', [HomeController::class, 'show'])->name('showCategory');
 
 Route::resource('users', UserController::class);
 

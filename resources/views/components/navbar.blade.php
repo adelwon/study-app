@@ -9,7 +9,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                         @foreach($categories as $category)
-                            <li><a class="dropdown-item " href="#">{{$category->name}}</a></li>
+                            <li><a class="dropdown-item " href="{{route('showCategory', $category)}}">{{$category->name}}</a></li>
                         @endforeach
                     </ul>
                 </li>
